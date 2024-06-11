@@ -3,3 +3,5 @@ export interface Instance {
   regions: string[];
   operators: string[];
 }
+
+export type InstanceList = Record<string, Instance[]>;

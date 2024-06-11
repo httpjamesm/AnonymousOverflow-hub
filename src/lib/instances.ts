@@ -1,4 +1,4 @@
-import { Instance } from "./interfaces/instance";
+import type { InstanceList } from "./interfaces/instance";
 
 export const fetchInstances = async () => {
   const instanceManifestUrl =
@@ -7,7 +7,7 @@ export const fetchInstances = async () => {
 
   const res = await fetch(instanceManifestUrl);
 
-  const data: Instance[] = await res.json();
+  const data: InstanceList = await res.json();
 
   return data;
 };
