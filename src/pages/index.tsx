@@ -13,12 +13,18 @@ const Home = () => {
       <div className={styles.wrapper}>
         <main className={styles.container}>
           <div className={styles.brandingContainer}>
-            <Image
-              src="/codecircles.webp"
-              alt="Anonymous Overflow"
-              width={200}
-              height={200}
-            />
+            <a
+              href="https://github.com/httpjamesm/AnonymousOverflow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/codecircles.webp"
+                alt="Anonymous Overflow"
+                width={200}
+                height={200}
+              />
+            </a>
           </div>
           <div style={{ margin: "5rem 0" }} />
           <InstancesSection />
