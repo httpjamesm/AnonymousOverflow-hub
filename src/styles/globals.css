@@ -9,3 +9,11 @@ body,
 body {
     background-color: #1B1F26;
 }
+
+a {
+    color: #92adff;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+}

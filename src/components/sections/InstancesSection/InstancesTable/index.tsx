@@ -1,5 +1,9 @@
+import { useEffect, useState } from "react";
 import styles from "./InstancesTable.module.scss";
 import { Inter } from "next/font/google";
+import type { Instance } from "@/lib/interfaces/instance";
+import { fetchInstances } from "@/lib/instances";
+import InstanceRow from "./InstanceRow";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -7,6 +11,21 @@ const inter = Inter({
 });
 
 const InstancesTable = () => {
+  const [instances, setInstances] = useState<Instance[]>([]);
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  const init = async () => {
+    try {
+      const instances = await fetchInstances();
+      setInstances(instances);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <div className={[styles.tableContainer, inter.className].join(" ")}>
       <table className={styles.table}>
@@ -18,11 +37,9 @@ const InstancesTable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Instance 1</td>
-            <td>United States</td>
-            <td>Admin 1</td>
-          </tr>
+          {instances.map((instance, i) => (
+            <InstanceRow key={i} instance={instance} />
+          ))}
         </tbody>
       </table>
     </div>
