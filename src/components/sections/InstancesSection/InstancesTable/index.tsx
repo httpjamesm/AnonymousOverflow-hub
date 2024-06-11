@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Instance, type InstanceList } from "@/lib/interfaces/instance";
 import { fetchInstances } from "@/lib/instances";
 import InstanceRow from "./InstanceRow";
+import Loader from "@/components/Loader";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -35,10 +36,22 @@ const InstancesTable = () => {
       setSelectedProtocol(protocols[0]);
     } catch (e) {
       console.error(e);
+      alert("Failed to fetch instances. Is GitHub accessible?");
     }
   };
 
-  if (!instanceList) return null;
+  if (!instanceList)
+    return (
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Loader />
+      </div>
+    );
 
   return (
     <div className={[styles.tableContainer, inter.className].join(" ")}>
