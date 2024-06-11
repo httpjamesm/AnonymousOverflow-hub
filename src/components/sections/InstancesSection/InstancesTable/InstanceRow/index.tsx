@@ -6,13 +6,13 @@ const InstanceRow = ({ instance }: { instance: Instance }) => {
 
   return (
     <tr>
-      <td>
+      <td data-label="URL">
         <a href={instance.url} target="_blank" rel="noopener noreferrer">
           {domain}
         </a>
       </td>
-      <td>{instance.regions.join(", ")}</td>
-      <td>
+      <td data-label="Regions">{instance.regions.join(", ")}</td>
+      <td data-label="Operators">
         <div className={styles.operators}>
           {instance.operators.map((operator) => (
             <a

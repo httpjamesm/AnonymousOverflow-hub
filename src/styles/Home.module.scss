@@ -14,10 +14,15 @@
     display: flex;
     justify-content: center;
     padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
 
     .container {
         position: relative;
         color: white;
+        width: 100%;
+        max-width: 80rem;
 
         .brandingContainer {
             width: 100%;
