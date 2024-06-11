@@ -11,12 +11,14 @@ const Home = () => {
       </div>
       <div className={styles.wrapper}>
         <main className={styles.container}>
-          <Image
-            src="/codecircles.webp"
-            alt="Anonymous Overflow"
-            width={200}
-            height={200}
-          />
+          <div className={styles.brandingContainer}>
+            <Image
+              src="/codecircles.webp"
+              alt="Anonymous Overflow"
+              width={200}
+              height={200}
+            />
+          </div>
           <div style={{ margin: "5rem 0" }} />
           <InstancesSection />
         </main>
