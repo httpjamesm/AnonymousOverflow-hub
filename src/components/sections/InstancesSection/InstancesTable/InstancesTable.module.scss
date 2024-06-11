@@ -1,0 +1,37 @@
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #2C3546;
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th {
+        background-color: #58698A;
+        color: white;
+        text-align: left;
+        padding: 16px;
+        font-size: 1.25rem;
+    }
+
+    td {
+        padding: 16px;
+        border-top: 1px solid #58698A;
+    }
+
+    tbody tr:hover {
+        background-color: #3C4A61;
+    }
+
+    th,
+    td {
+        &:not(:last-child) {
+            padding-right: 3rem;
+        }
+    }
+}

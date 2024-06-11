@@ -1,0 +1,26 @@
+.waveContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+
+    .container {
+        position: relative;
+        color: white;
+
+        h1 {
+            text-align: center;
+        }
+    }
+}
