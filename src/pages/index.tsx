@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import InstancesSection from "@/components/sections/InstancesSection";
 import HomeWave from "@/components/vectors/HomeWave";
 import styles from "@/styles/Home.module.scss";
@@ -21,6 +22,7 @@ const Home = () => {
           </div>
           <div style={{ margin: "5rem 0" }} />
           <InstancesSection />
+          <Footer />
         </main>
       </div>
     </>
